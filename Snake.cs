@@ -7,8 +7,6 @@ namespace OOP_Arv
     {
         private bool Rattels { get; set; } = rattels; //unique boolean property
 
-        private string UniqeFeature { get; set; } = uniqueFeature(rattels);
-        
         public override string MakeSound()
         {
             return "Sssssssh";
@@ -19,9 +17,9 @@ namespace OOP_Arv
             return "The Snake eats a little mouse.";
         }
 
-        private static string uniqueFeature(bool rattels)
+        public static string UniqueFeature(bool rattels)
         {
-            return rattels ? "You stept on it's tail and it has now bitten your ankel." : "All is calm.";
+            return rattels ? "You step on it's tail and it has now bitten your ankle." : "All is calm.";
         }
         public override string Sleep()
         {
@@ -31,7 +29,7 @@ namespace OOP_Arv
         public override string ToString()
         {
             return base.ToString() + $"\n\tDoes it rattle? : {Rattels}" +
-                   $"\n\t{UniqeFeature}";
+                   $"\n\t{UniqueFeature}";
         }
        
     }

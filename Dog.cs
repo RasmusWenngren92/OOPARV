@@ -1,14 +1,10 @@
 ﻿
 namespace OOP_Arv
 {
-    public class Dog : Animal  //creating a Dog class that inherits from Animal
+    public class Dog(string color, int age, bool isVenomous, string diet, bool isDomesticated, bool isAGoodBoy)
+        : Animal(color, age, isVenomous, diet, isDomesticated) //creating a Dog class that inherits from Animal with a primary constructor
     {
-        public Dog(string color, int age, bool isVenomous, string diet, bool isDomesticated, bool isAGoodBoy) : base(color, age, isVenomous, diet, isDomesticated)
-        {
-             IsAGoodBoy = isAGoodBoy;
-        }
-
-        protected bool IsAGoodBoy { get; set; } //unique boolean property
+        protected bool IsAGoodBoy { get; set; } = isAGoodBoy; //unique boolean property
         
         public override string MakeSound()
         {
@@ -25,7 +21,7 @@ namespace OOP_Arv
             return $"The {GetType().Name} is sound asleep in it's basket.";
         }
 
-        public virtual string UniqueFeature(bool isAGoodBoy)
+        public virtual string UniqueFeature()
         {
             return IsAGoodBoy ? "Gets a good belly rub!" : "Do NOT bite the pillows!";
         }
@@ -38,7 +34,7 @@ namespace OOP_Arv
         public override string ToString()
         {
             return base.ToString() + $"\n\tIs it a good boy? : {IsAGoodBoy}" +
-                   $"\n\t{UniqueFeature(IsAGoodBoy)}" + $"\n\t{Fetch()}";
+                   $"\n\t{UniqueFeature()}" + $"\n\t{Fetch()}";
         }
     }
 }

@@ -3,6 +3,10 @@ namespace OOP_Arv
 {
     internal class Program
     {
+        // Programmer   : Rasmus Wenngren
+        // Program      : Fullstack .NET
+        // Course       : Promgrammering med C# och .NET
+        // Lab 6        : OOP ARV
         
         private static void Main(string[] args)
         {

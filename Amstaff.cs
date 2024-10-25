@@ -2,9 +2,9 @@
 namespace OOP_Arv
 {
     public class Amstaff(string color, int age, bool isVenomous, string diet, bool isDomesticated, bool isAgressive)
-        : Dog(color, age, isVenomous, diet, isDomesticated, isAGoodBoy)
+        : Dog(color, age, isVenomous, diet, isDomesticated, isAGoodBoy) //new class from dog
     {
-        private static bool isAGoodBoy = true;
+        private const bool isAGoodBoy = true;
 
         private bool IsAgressive { get; set; } = isAgressive; //unique boolean property
        
@@ -27,7 +27,7 @@ namespace OOP_Arv
             return $"The {GetType().Name} is brining back a log, good luck throwing that.";
         }
 
-        public override string UniqueFeature(bool isAgressive)
+        public override string UniqueFeature()
         {
             return IsAgressive? "Chasing away the intruders!" : "Guarding the house";
         }

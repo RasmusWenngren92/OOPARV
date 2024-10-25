@@ -14,16 +14,16 @@ namespace OOP_Arv
 
         public override string Eat()
         {
-            return "The Lion eats a juciy pieces of meat.";
+            return "The Lion eats a juicy pieces of meat.";
         }
 
         private string UniqueFeature(bool hasMane)
         {
-            return HasMane ? "The Lion shakes its mane gracioulsly!" : "This lion doesn't have a mane";
+            return HasMane ? "The Lion shakes its mane graciously!" : "This lion doesn't have a mane";
         }
         public override string Sleep()
         {
-            return "The Lion is sound asleep benethe a tree.";
+            return "The Lion is sound asleep beneath a tree.";
         }
         public override string ToString()
         {

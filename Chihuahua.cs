@@ -4,7 +4,7 @@ namespace OOP_Arv
     public class Chihuahua(string color, int age, bool isVenomous, string diet, bool isDomesticated, bool seesOtherDog)
         : Dog(color, age, isVenomous, diet, isDomesticated, isAGoodBoy) //new class from dog
     {
-        private static bool isAGoodBoy = true;
+        private const bool isAGoodBoy = true;
 
         private bool SeesOtherDog { get; set; } = seesOtherDog; //unique boolean property
         
@@ -23,7 +23,7 @@ namespace OOP_Arv
             return "The Chihuahua is sound asleep on the couch.";
         }
 
-        public override string UniqueFeature(bool seesOtherDog)
+        public override string UniqueFeature()
         {
              return SeesOtherDog ? "You meet another dog! The Chihuahua throws a tantrum." : "Just a lovely walk with the dog.";
         }
