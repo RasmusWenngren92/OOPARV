@@ -2,10 +2,16 @@
 
 namespace OOP_Arv
 {
-    public class Snake(string color, int age, bool isVenomous, string diet, bool isDomesticated, bool rattels)
+    public class Snake(
+        int age = 1, 
+        bool isVenomous = true,
+        string diet = "Carnivore",
+        bool isDomesticated = false,
+        bool rattels = true,
+        string color = "Unknown")
         : Animal(color, age, isVenomous, diet, isDomesticated) //new class from animal
     {
-        private bool Rattels { get; set; } = rattels; //unique boolean property
+        private bool Rattels { get; } = rattels; //unique boolean property
 
         public override string MakeSound()
         {

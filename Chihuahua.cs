@@ -1,12 +1,17 @@
 ﻿
 namespace OOP_Arv
 {
-    public class Chihuahua(string color, int age, bool isVenomous, string diet, bool isDomesticated, bool seesOtherDog)
-        : Dog(color, age, isVenomous, diet, isDomesticated, isAGoodBoy) //new class from dog
+    public class Chihuahua(string color = "Brown", 
+        int age = 5, 
+        bool isVenomous = false, 
+        string diet = "Omnivore", 
+        bool isDomesticated = true, 
+        bool seesOtherDog = true)
+        : Dog(isVenomous, diet, isDomesticated, isAGoodBoy, color, age) //new class from dog
     {
         private const bool isAGoodBoy = true;
 
-        private bool SeesOtherDog { get; set; } = seesOtherDog; //unique boolean property
+        private bool SeesOtherDog { get; } = seesOtherDog; //unique boolean property
         
         public override string MakeSound()
         {

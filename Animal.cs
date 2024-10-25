@@ -2,7 +2,7 @@
 
 namespace OOP_Arv
 {
-    public abstract class Animal // creating a abstract class
+    public abstract class Animal // creating abstract class
         (string color, int age, bool isVenomous, string diet, bool isDomesticated)//Primary Constructor
     {   //Creating properties
         public string? Color { get; set; } = color;

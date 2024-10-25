@@ -1,11 +1,17 @@
 ﻿
 namespace OOP_Arv
 {
-    public class Dog(string color, int age, bool isVenomous, string diet, bool isDomesticated, bool isAGoodBoy)
+    public class Dog(
+        bool isVenomous = false,
+        string diet = "Omnivore",
+        bool isDomesticated = true,
+        bool isAGoodBoy = true,
+        string color = "Brown",
+        int age = 15)
         : Animal(color, age, isVenomous, diet, isDomesticated) //creating a Dog class that inherits from Animal with a primary constructor
     {
-        protected bool IsAGoodBoy { get; set; } = isAGoodBoy; //unique boolean property
-        
+        protected bool IsAGoodBoy { get; } = isAGoodBoy; //unique boolean property
+
         public override string MakeSound()
         {
             return "Voff Voff";

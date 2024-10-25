@@ -1,10 +1,16 @@
 ﻿
 namespace OOP_Arv
 {
-    public class Lion(string color, int age, bool isVenomous, string diet, bool isDomesticated, bool hasMane)
+    public class Lion(
+        int age = 12, 
+        bool isVenomous = false, 
+        string diet = "Carnivore", 
+        bool isDomesticated = false, 
+        bool hasMane = true, 
+        string color = "Orange")
         : Animal(color, age, isVenomous, diet, isDomesticated) //new class from animal
     {
-        private bool HasMane { get; set; } = hasMane; //unique boolean property
+        private bool HasMane { get; } = hasMane; //unique boolean property
      
     
         public override string MakeSound()
@@ -17,7 +23,7 @@ namespace OOP_Arv
             return "The Lion eats a juicy pieces of meat.";
         }
 
-        private string UniqueFeature(bool hasMane)
+        private string UniqueFeature()
         {
             return HasMane ? "The Lion shakes its mane graciously!" : "This lion doesn't have a mane";
         }
@@ -28,7 +34,7 @@ namespace OOP_Arv
         public override string ToString()
         {
             return base.ToString() + $"\n\tDoes it have a mane? : {HasMane}" +
-                   $"\n\t{UniqueFeature(HasMane)}";
+                   $"\n\t{UniqueFeature()}";
         }
     }
 }

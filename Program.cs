@@ -14,9 +14,9 @@ namespace OOP_Arv
             // Create a list of animals using collection expression
             List<Animal> animalList =
             [
-                new Lion("Orange", 15, false, "Carnivore", false, true),
-                new Dog("Brown", 12, false, "Omnivore", true, true), 
-                new Snake("Golden", 2, true, "Carnivore", false, true), 
+                new Lion(15, false, "Carnivore", false, true, "Orange"),
+                new Dog(false, "Omnivore", true, true, "Brown", 12), 
+                new Snake(2, true, "Carnivore", false, true, "Golden"), 
                 new Amstaff("Black", 6, false, "Omnivore", true, true),
                 new Chihuahua("Beige", 3, false, "Omnivore", true, true)
             ];
